@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SorterView</class>
+ <widget class="QWidget" name="SorterView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>379</width>
+    <height>490</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Processus de tri</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="initialListLabel">
+     <property name="text">
+      <string>Initial list</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="initialListLineEdit">
+     <property name="text">
+      <string>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="sentLeftListLabel">
+     <property name="text">
+      <string>Sent left list</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="sentLeftListLineEdit">
+     <property name="text">
+      <string>1, 2, 3, 4, 5</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="recvLeftListLabel">
+     <property name="text">
+      <string>Received left list</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="recvLeftLineEdit">
+     <property name="text">
+      <string>1, 2, 3, 4, 5</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="sentRightListLabel">
+     <property name="text">
+      <string>Sent right list</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="sentRightListLineEdit">
+     <property name="text">
+      <string>6, 7, 8, 9, 10</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="recvRightListLabel">
+     <property name="text">
+      <string>Received right list</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="recvRightListLineEdit">
+     <property name="text">
+      <string>6, 7, 8, 9, 10</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="mergedListLabel">
+     <property name="text">
+      <string>Merged list</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="mergedListLineEdit">
+     <property name="text">
+      <string>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="validButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Valid</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="statusLabel">
+     <property name="text">
+      <string>Status message: </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="statusPlainTextEdit">
+     <property name="font">
+      <font>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="plainText">
+      <string>. Ipso facto</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>validButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SorterView</receiver>
+   <slot>_validationSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>-25</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>_validationSlot()</slot>
+ </slots>
+</ui>
